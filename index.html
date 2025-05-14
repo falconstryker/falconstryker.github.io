@@ -235,34 +235,89 @@
         }
 
         /* Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
+        .education-degrees {
+            max-width: 900px;
+            margin: 0 auto 50px;
         }
 
-        .education-item {
+        .degree-item {
             background: var(--white);
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary-color);
         }
 
-        .education-item h3 {
+        .degree-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .degree-header h3 {
             color: var(--primary-color);
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .degree-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .university {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .location {
+            color: var(--text-light);
             margin-bottom: 10px;
         }
 
-        .education-item .degree {
-            font-weight: 600;
-            margin-bottom: 5px;
+        .minors {
+            font-style: italic;
+            color: var(--text-light);
         }
 
-        .education-item .location {
+        .certifications-title {
+            text-align: center;
+            margin: 40px 0 30px;
+            font-size: 1.6em;
+            color: var(--primary-color);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .certification-item {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(11, 61, 145, 0.1);
+        }
+
+        .certification-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .certification-item p {
             color: var(--text-light);
+            font-size: 0.95em;
         }
 
         /* Contact Section */
@@ -313,6 +368,15 @@
                 gap: 20px;
                 padding: 0 10px;
             }
+
+            .degree-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .degree-date {
+                margin-top: 5px;
+            }
         }
     </style>
 </head>
@@ -322,7 +386,7 @@
     <header class="hero">
         <div class="container">
             <div class="profile-section">
-                <img src="Headshot_2.jpg" alt="Courtney Batterson" class="profile-image">
+                <img src="/api/placeholder/200/200" alt="Courtney Batterson" class="profile-image">
                 <div class="profile-info">
                     <h1>Courtney Batterson</h1>
                     <p class="tagline">Research Scientist at NASA Ames</p>
@@ -350,7 +414,7 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I'm a Research Scientist with the Bay Area Environmental Research Institute at NASA Ames Research Center. As a member of the Mars Climate Modeling Center for the last 8 years, I have experience in data analysis and atmospheric science. I specialize in transforming complex datasets into scientific insights using Python, R, and advanced data visualization techniques.</p>
+                <p>I'm a Research Scientist with the Bay Area Environmental Research Institute at NASA Ames  Research Center. As a member of the Mars Climate Modeling Center for the last 8 years, I have experience in data analysis and atmospheric science. I specialize in transforming complex datasets into scientific insights using Python, R, and advanced data visualization techniques.</p>
                 <p>My work combines data visualization, statistical analysis, and scientific research to advance our understanding of Mars climate systems. I'm passionate about leveraging data-driven approaches to solve complex scientific challenges.</p>
             </div>
         </div>
@@ -432,7 +496,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">2021 - Present</div>
-                    <div class="timeline-title">Research Scientist</div>
+                    <div class="timeline-title">Associate Research Scientist</div>
                     <div class="timeline-company">NASA Ames Mars Climate Modeling Center<br>Bay Area Environmental
                         Research Institute</div>
                 </div>
@@ -479,7 +543,7 @@
                     <p class="minors">Minors: Atmospheric Science, Communication Studies</p>
                 </div>
             </div>
-    
+
             <h3 class="certifications-title">Professional Certifications</h3>
             <div class="certifications-grid">
                 <div class="certification-item">
